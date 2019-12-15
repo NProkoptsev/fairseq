@@ -327,6 +327,5 @@ class FusedAdam(torch.optim.Optimizer):
                 state['exp_avg'] = state['exp_avg'].half()
                 state['exp_avg_sq'] = state['exp_avg_sq'].half()
                 p.data = p.data.half()
-                p.data.grad = p.data.grad.half()
 
         return loss
